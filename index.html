@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kulinaryy</title>
+  <link rel="website icon" type="png" href="foto/love logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet" />
+  <style>
+    body.dark-mode .fonts {
+      color: hsl(45, 100%, 75%);
+    }
+
+    body.dark-mode .harga {
+      color: hsl(25, 100%, 65%);
+    }
+
+    .harga {
+      font-weight: bold;
+      color: #801300;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .mie-kocok-img {
+      width: 300px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="loader" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;z-index:2000;display:flex;justify-content:center;align-items:center;">
+    <i class="fas fa-utensils fa-3x fa-spin" style="color:#801300"></i>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button id="darkModeToggle" title="Ganti Mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">
+        <i class="fas fa-utensils"></i> Makan<span>Yukk!!</span>
+      </a>
+      <div class="navbar-nav">
+        <a href="#about">About</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="content" id="about">
+    <div class="isi">
+      <h1>Makanan Khas Jawa Barat</h1>
+      <h2>Leupeut</h2>
+      <p class="fonts">
+        <strong>Leupeut</strong>: Camilan Tradisional yang Sarat Makna dan Rasa<br><br>
+        Leupeut merupakan makanan tradisional dari Jawa Barat...
+      </p>
+      <p>Leupeut terbuat dari ketan yang dibungkus janur, biasanya disantap bersama tempe goreng atau tahu isi.</p>
+      <p class="harga">Rp5.000</p>
+    </div>
+    <img src="image/Leupeut_ Sundanese food.jpg" alt="Leupeut khas Bogor">
+  </section>
+
+  <section class="content">
+    <div class="isi">
+      <h2>Cimol</h2>
+      <p class="fonts">
+        Cimol adalah singkatan dari "aci digemol"...
+      </p>
+      <p>Cimol digoreng hingga garing di luar tapi tetap kenyal di dalam, biasa disajikan dengan bubuk cabai atau keju.</p>
+      <p class="harga">Rp7.000</p>
+    </div>
+    <img src="image/b89e893c-31a1-42d1-a0bd-b83e21b91c73.jpg" alt="Cimol khas Jawa Barat">
+  </section>
+
+  <section class="content">
+    <div class="isi">
+      <h2>Mie Kocok Bandung</h2>
+      <p class="fonts">
+        Mie Kocok adalah makanan khas Bandung...
+      </p>
+      <p>Hidangan ini terdiri dari mie gepeng, kikil sapi, tauge, dan kuah kaldu yang gurih, cocok disantap saat cuaca dingin.</p>
+      <p class="harga">Rp25.000</p>
+    </div>
+    <img src="image/Resep Mie Kocok Bandung dari @jeehan_kitchen.jpg" alt="Mie Kocok Bandung" class="mie-kocok-img" />
+  </section>
+
+  <!-- Layanan -->
+  <section class="content" id="layanan">
+    <div class="isi">
+      <h2>Menu Makanan Jawa Barat</h2>
+      <ul class="fonts">
+        <li>Leupeut</li>
+        <li>Cimol</li>
+        <li>Mie Kocok</li>
+        <li>Lotek</li>
+        <li>Seblak</li>
+        <li>Surabi</li>
+        <li>Nasi Tutug Oncom</li>
+      </ul>
+    </div>
+    <img src="image/d9d66dda-1bc8-4fe0-b406-f949cced66ac.jpg" alt="Menu Makanan Jawa Barat">
+  </section>
+
+  <!-- Kontak -->
+  <section class="content" id="kontak">
+    <div class="isi">
+      <h2>Kontak Kami</h2>
+      <form id="kontakForm">
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="pesan">Pesan:</label><br>
+        <textarea id="pesan" name="pesan" rows="4" required></textarea><br><br>
+
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <div class="maps-section">
+    <h3>Lokasi Rekomendasi Kuliner</h3>
+    <iframe src="https://www.google.com/maps/embed?..."></iframe>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3><i class="fas fa-utensils"></i> Kulinaryy</h3>
+      <p>Temukan beragam makanan khas Jawa Barat dan nikmati cita rasa nusantara!</p>
+      <div class="footer-links">
+        <i class="fas fa-map-marker-alt"></i> Lokasi
+        <i class="fab fa-instagram"></i> Instagram
+        <i class="fas fa-envelope"></i> Email
+      </div>
+      <p>&copy; 2025 Kulinaryy | Dibuat oleh Kelompok Cicurug PPLG</p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTopBtn" title="Kembali ke atas">↑</button>
+
+  <!-- JavaScript -->
+  <script>
+    // Scroll ke atas
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+    scrollBtn.onclick = () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Alert form
+    document.getElementById("kontakForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      alert("Terima kasih, " + nama + "! Pesanmu telah dikirim.");
+      this.reset();
+    });
+
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const icon = toggleBtn.querySelector('i');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      icon.className = document.body.classList.contains('dark-mode') ? 'fas fa-sun' : 'fas fa-moon';
+    });
+
+    // Loader
+    window.addEventListener("load", () => {
+      document.getElementById("loader").style.display = "none";
+    });
+  </script>
+</body>
+
+</html>

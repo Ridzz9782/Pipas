@@ -1,0 +1,419 @@
+/* RESET STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* GLOBAL */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: aliceblue;
+    color: black;
+    padding-top: 60px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffe5e5;
+    padding: 1.4rem 7%;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-logo i {
+    color: #801300;
+    font-size: 25px;
+}
+
+.navbar .navbar-logo span {
+    color: #801300;
+}
+
+.navbar-nav a {
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #801300;
+}
+
+/* === CONTENT SECTION === */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 7%;
+    gap: 30px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content .isi {
+    max-width: 600px;
+    flex: 1 1 300px;
+}
+
+.content .isi h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #801300;
+}
+
+.content .isi h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.content .isi p,
+.content .isi ul {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* LIST & IMAGE EFFECTS */
+.content ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.content img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+/* KHUSUS GAMBAR MENU/KONTAK */
+#layanan img, #kontak img {
+    max-width: 300px;
+    border-radius: 10px;
+    filter: grayscale(10%);
+}
+
+#layanan img:hover, #kontak img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+/* === FORM KONTAK === */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #801300;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #a31900;
+}
+
+/* === KONTAK SECTION KHUSUS === */
+.kontak-kanan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.kontak-img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* MAP */
+.maps-section {
+    width: 100%;
+    text-align: center;
+}
+
+.maps-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+/* === FOOTER === */
+.footer {
+    background-color: #801300;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    width: 100vw;
+    margin-top: 50px;
+}
+
+/* === TOMBOL SCROLL TO TOP === */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #801300;
+    color: white;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #a8261a;
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #111;
+    color: white;
+    border-color: #333;
+}
+
+body.dark-mode a {
+    color: #ffc107;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    background-color: #333;
+    color: white;
+    border: 1px solid #666;
+}
+
+/* === DARK MODE TOGGLE BUTTON === */
+#darkModeToggle {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 1000;
+    background-color: #801300;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#darkModeToggle:hover {
+    background-color: #4b0000;
+    transform: scale(1.1);
+}
+
+/* === LOADER === */
+#loader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 5px solid #801300;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    .content .isi h1 {
+        font-size: 28px;
+    }
+
+    .content .isi h2 {
+        font-size: 22px;
+    }
+
+    .content .isi p,
+    .content .isi ul {
+        font-size: 16px;
+    }
+}
+/* NAVBAR dengan blur */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 229, 229, 0.8); /* transparan */
+    padding: 1.4rem 7%;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(6px); /* blur efek */
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* Materi di content - warna selang seling hanya di luar #kontak */
+.content:not(#kontak) .isi:nth-child(odd) {
+    background-color: #ffe5e5; /* warna pink navbar */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(128, 19, 0, 0.15);
+}
+
+.content:not(#kontak) .isi:nth-child(even) {
+    background-color: #fff1f1; /* warna pink muda */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(128, 19, 0, 0.1);
+}
+
+/* Pastikan .isi di #kontak tetap tanpa warna latar */
+#kontak .isi {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+        backdrop-filter: blur(6px); /* tetap blur */
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 30px 5%;
+        gap: 20px;
+    }
+
+    /* Materi selang seling di mobile */
+    .content:not(#kontak) .isi:nth-child(odd),
+    .content:not(#kontak) .isi:nth-child(even) {
+        padding: 15px;
+        max-width: 100%;
+        box-shadow: 0 1px 6px rgba(128, 19, 0, 0.1);
+        border-radius: 12px;
+    }
+
+    .content .isi h1 {
+        font-size: 24px;
+    }
+
+    .content .isi h2 {
+        font-size: 20px;
+    }
+
+    .content .isi p,
+    .content .isi ul {
+        font-size: 14px;
+    }
+}
+.mie-kocok-img {
+    max-width: 280px; /* misalnya dari 300px jadi 280px */
+    width: 100%;
+    height: 35px;
+}
